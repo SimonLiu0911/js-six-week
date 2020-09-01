@@ -56,6 +56,9 @@
       <p>***僅個人練習使用．不做商業用途***</p>
       <p style="font-size: .875rem;">
         js作品實戰班-2020夏季-第六週作業
+        <br />
+        圖面來源：
+        <a href="https://unsplash.com">Unsplash</a>
         <br />Cover template for
         <a href="https://getbootstrap.com/">Bootstrap</a>
         <br />
