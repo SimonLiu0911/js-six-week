@@ -23,10 +23,10 @@
             <tr v-for="item in cart" :key="item.id">
               <td class="align-middle">{{ item.product.title }}</td>
               <td class="align-middle">
-                <div class="input-group">
+                <div class="input-group bg-light">
                   <div class="input-group-append">
                     <button
-                      class="btn btn-outline-primary"
+                      class="btn btn-outline-dark"
                       type="button"
                       @click="quantityUpdata(item.product.id, item.quantity - 1)"
                       :disabled="item.quantity === 1"
@@ -41,7 +41,7 @@
                   />
                   <div class="input-group-prepend">
                     <button
-                      class="btn btn-outline-primary"
+                      class="btn btn-outline-dark"
                       type="button"
                       @click="quantityUpdata(item.product.id, item.quantity + 1)"
                     >+</button>

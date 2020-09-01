@@ -150,6 +150,12 @@ export default {
       this.$http.get(url).then((response) => {
         this.products = response.data.data;
         this.pagination = response.data.meta.pagination;
+        if (this.tempProduct.id) {
+          this.tempProduct = {
+            imageUrl: [],
+          };
+          $('#productModal').modal('hide');
+        }
         this.isLoading = false;
       });
     },

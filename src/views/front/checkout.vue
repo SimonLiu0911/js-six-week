@@ -2,7 +2,7 @@
   <div class="checkout">
     <div id="CheckingPage" class="container">
       <div class="row">
-        <div class="col-md-6 p-5">
+        <div class="col-md-6 p-5 text-left">
           <h3 class="text-center border-bottom mb-4 pb-3">Contact Information</h3>
           <validation-observer v-slot="{ invalid }">
             <form @submit.prevent="createOrder">
@@ -11,7 +11,7 @@
                   <label for="username">Name</label>
                   <input
                     id="username"
-                    class="form-control"
+                    class="form-control rounded-0 input_style"
                     type="text"
                     v-model="form.name"
                     :class="classes"
@@ -26,7 +26,7 @@
                   <label for="email">Email</label>
                   <input
                     id="email"
-                    class="form-control"
+                    class="form-control rounded-0 input_style"
                     type="email"
                     v-model="form.email"
                     name="Email"
@@ -41,7 +41,7 @@
                   <label for="tel">Phone Number</label>
                   <input
                     id="tel"
-                    class="form-control"
+                    class="form-control rounded-0 input_style"
                     :class="classes"
                     type="tel"
                     v-model="form.tel"
@@ -56,7 +56,7 @@
                   <label for="address">Address</label>
                   <input
                     id="address"
-                    class="form-control"
+                    class="form-control rounded-0 input_style"
                     :class="classes"
                     type="text"
                     v-model="form.address"
@@ -67,7 +67,7 @@
               </div>
               <div class="form-group">
                 <label for="message">Payment</label>
-                <select class="form-control" v-model="form.payment" required>
+                <select class="form-control input_style" v-model="form.payment" required>
                   <option value selected disabled>Payment</option>
                   <option value="WebATM">WebATM</option>
                   <option value="ATM">ATM</option>
@@ -80,7 +80,12 @@
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" class="form-control" cols="30" rows="3"></textarea>
+                <textarea
+                  id="message"
+                  class="form-control rounded-0 input_style"
+                  cols="30"
+                  rows="3"
+                ></textarea>
               </div>
               <div>
                 <button
@@ -111,7 +116,11 @@
             </tbody>
           </table>
           <div class="input-group py-3 border-bottom">
-            <input type="text" value class="form-control rounded-0" placeholder="Discount Code" />
+            <input
+              type="text"
+              class="form-control rounded-0 input_style"
+              placeholder="Discount Code"
+            />
             <button type="button" class="btn btn-dark rounded-0" disabled>APPLY</button>
           </div>
           <div id="totalcart" class="my-3">
@@ -176,6 +185,21 @@ export default {
 </script>
 
 <style lang="scss">
+#totalcart {
+  float: right;
+}
+
+#totalcart .totalcart__table {
+  font-size: 30px;
+}
+
+.clearBoth {
+  clear: both;
+}
+
+#totalcart .totalcart__table .border-bottom {
+  border-color: black !important;
+}
 #CheckingPage .col-md-6_right {
   background-color: rgba(0, 0, 0, 0.03) !important;
 }
@@ -188,5 +212,10 @@ export default {
 .ReturnToCart_color:hover {
   text-decoration: none;
   color: black;
+}
+.input_style:focus {
+  border-style: solid;
+  border-color: gray;
+  box-shadow: 0 0 3px gray;
 }
 </style>

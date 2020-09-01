@@ -164,13 +164,11 @@ export default {
   },
   methods: {
     uploadProduct() {
-      this.isLoading = true;
       const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_UUID}/admin/ec/product`;
       // POST api/{uuid}/admin/ec/product
       this.$http.post(url, this.NewProduct).then((response) => {
         $('#newproductModal').modal('hide');
         this.$emit('upload');
-        this.isLoading = false;
         console.log(response);
       });
     },

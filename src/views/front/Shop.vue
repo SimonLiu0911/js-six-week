@@ -3,8 +3,8 @@
     <div class="container my-2">
       <div class="row">
         <div class="col-md-4 col-sm-6 mb-4" v-for="item in products" :key="item.id">
-          <div class="card border-0 shadow-sm">
-            <img :src="item.imageUrl" class="card-img-top" alt />
+          <div class="card border-0 bg-white">
+            <img :src="item.imageUrl" class="card-img-top commidity_img" alt />
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">{{ item.content }}</p>
@@ -37,7 +37,6 @@
 
     <!-- Pagination -->
     <Pagination :pages="pagination" @update="getFrontProducts"></Pagination>
-
     <!-- Vue Loading -->
     <loading :active.sync="isLoading"></loading>
     <!-- Product Detail Modal -->
@@ -135,6 +134,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-</style>

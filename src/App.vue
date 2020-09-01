@@ -26,7 +26,7 @@ export default {
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 #nav {

@@ -24,7 +24,7 @@
           <div class="d-flex justify-content-between align-items-baseline">
             <div v-if="!tempProduct.price" class="h4">{{ tempProduct.origin_price }} 元</div>
             <del v-if="tempProduct.price" class="h6">
-                原價 {{ tempProduct.origin_price | thousandth }} 元
+                Price {{ tempProduct.origin_price | thousandth }} 元
             </del>
             <div
               v-if="tempProduct.price"
